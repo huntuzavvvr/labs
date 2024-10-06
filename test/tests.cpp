@@ -68,3 +68,10 @@ TEST(test_08, eleven_tests){
     ASSERT_TRUE(a8 > sub);
     ASSERT_TRUE(sub < a8);
 }
+
+TEST(test_09, eleven_tests){
+    Eleven a9("987A4");
+    Eleven sub("AAAAA001");
+    a9 = std::move(sub);
+    ASSERT_EQ(a9.get_data()[0], 'A');
+}

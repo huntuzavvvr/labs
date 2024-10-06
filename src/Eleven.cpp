@@ -185,6 +185,14 @@ Eleven& Eleven::operator=(const Eleven& other){
     return *this;
 }
 
+Eleven& Eleven::operator=(Eleven&& other) noexcept{
+    data = other.get_data();
+    other.size = 0;
+    other.data = nullptr;
+    return *this;
+}
+
+
 bool Eleven::operator>(const Eleven& other) const {
     if (size > other.get_size()){
         return true;

@@ -17,6 +17,7 @@ class Eleven{
         Eleven& operator+=(const Eleven& other);
         Eleven& operator-=(const Eleven& other);
         Eleven& operator=(const Eleven& other);
+        Eleven& operator=(Eleven&& other) noexcept;
         bool operator>(const Eleven& other) const;
         bool operator<(const Eleven& other) const;
         bool operator==(const Eleven& other) const;
