@@ -7,7 +7,7 @@
 class RobberFactory : public NPCFactory {
 public:
     std::unique_ptr<NPC> createNPC(const std::string& name, int x, int y) override {
-        return std::make_unique<Elf>(name, x, y);
+        return std::make_unique<Robber>(name, x, y);
     }
 };
 

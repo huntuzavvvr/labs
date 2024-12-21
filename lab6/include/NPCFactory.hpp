@@ -10,6 +10,7 @@ public:
     virtual std::unique_ptr<NPC> createNPC(const std::string& name, int x, int y) = 0;
     static void registerFactory(const std::string& type, NPCFactory* factory);
     static std::unique_ptr<NPC> create(const std::string& type, const std::string& name, int x, int y);
+
 private:
     static std::map<std::string, NPCFactory*> factories;
 };
